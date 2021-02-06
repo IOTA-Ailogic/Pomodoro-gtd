@@ -18,9 +18,11 @@ app.use(express.urlencoded(
     }
 ))
 
-const router = require('./router')
+const r_pomodoro = require('./routes/r_pomodoro')
+const r_gtd = require('./routes/r_gtd')
 
-app.use('/', router())
+app.use('/pomodoro', r_pomodoro())
+app.use('./gtd', r_gtd())
 
 app.use((req, res)=>{
 
