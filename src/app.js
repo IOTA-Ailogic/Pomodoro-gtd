@@ -27,6 +27,7 @@ const r_gtd = require('./routes/r_gtd');
 
 app.use('/pomodoro', r_pomodoro());
 app.use('/gtd', r_gtd());
+app.get('/', (req, res)=> res.render('home'))
 
 app.use((req, res) => {
   res.status(404);
