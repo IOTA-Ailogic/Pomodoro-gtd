@@ -1,11 +1,10 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
-const pomdoro = require('../controller/c_pomodoro')
+const pomdoro = require('../controller/c_pomodoro');
 
-module.exports = () =>{
+module.exports = () => {
+  router.get('/', pomdoro.start);
 
-    router.get('/', pomdoro.start)
-
-    return router
-}
+  return router;
+};

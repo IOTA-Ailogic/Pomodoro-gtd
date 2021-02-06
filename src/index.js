@@ -1,39 +1,5 @@
-const express = require('express')
-const path = require('path')
-const env = require('node-env-file')
+const app = require('./app');
 
-const app = express()
-
-app.set('views', path.join(__dirname, 'views'))
-
-app.set('view engine', 'pug')
-
-app.use(express.static(path.join(__dirname, 'public')))
-
-env('./.env')
-
-app.use(express.urlencoded(
-    {
-        extended: true
-    }
-))
-
-const r_pomodoro = require('./routes/r_pomodoro')
-const r_gtd = require('./routes/r_gtd')
-
-app.use('/pomodoro', r_pomodoro())
-app.use('./gtd', r_gtd())
-
-app.use((req, res)=>{
-
-    res.status(404)
-
-    res.render('404', { url: req.url })
-
-    return
-
-})
-
-const port = process.env.PORT || 3000
-
-app.listen(port)
+const server = app.listen(app.get('port'), app.get('host'), () =>
+  console.log(`Listening on port: ${app.get('port')}`)
+);
