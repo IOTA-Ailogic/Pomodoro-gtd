@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #373A40;
+}
+.boton_inicio{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.boton_inicio #boton{
+    width: 190px;
+    height: 190px;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    cursor: pointer;
+    box-shadow: 0px 0px 18px 2px #00c3ff2d;
+    border: 8px solid #00C2FF;
+    background-color: #00C2FF;
+    transition-duration: 600ms;
+    outline: none;
+    user-select: none;
+}
+.boton_inicio #boton:hover{
+    background: radial-gradient(50% 50% at 50% 50%, #46d2fd7e 0%, #0094c57e 100%);
+    box-shadow: 0px 0px 18px 2px #00c3ff6c;
+}
+@media screen and (max-width: 768px){
+    .boton_inicio #boton{
+        cursor: default;
+    }
+}
