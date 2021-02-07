@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="home.css")
+    body
+        header 
+            a(href="/") 
+                <svg width="29" height="32" viewBox="0 0 29 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16L28.6875 0.411545L28.6875 31.5885L0 16Z" fill="#0087B1"/>
+                </svg>
+        main  
+            .tit 
+                h1 Pomodoro 
+            .descrip 
+                p El método se basa en la idea de que las pausas regulares pueden mejorar la agilidad mental, dedicale tiempo a lo que te interaza y/o corresponde. puedes colocar el tiempo que vas a dedicarle a tu actividad y luego te tomas una pausa para segir en tus actividades con mas energia. Entre pausas y actividades puedes cambiar la duracion.
+        .clock
+            .up
+                #minuto_up
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 0L27.8564 24H0.143594L14 0Z" fill="#C4C4C4" fill-opacity="0.3"/>
+                    </svg>
+                #sec_up
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 0L27.8564 24H0.143594L14 0Z" fill="#C4C4C4" fill-opacity="0.3"/>
+                    </svg>
+            .time
+                -var conteo = '00'
+                h1#minuto= conteo
+                h1 :
+                h1#sec= conteo
+            .down
+                #minuto_down
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 0L27.8564 24H0.143594L14 0Z" fill="#C4C4C4" fill-opacity="0.3"/>
+                    </svg>
+                #sec_down
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 0L27.8564 24H0.143594L14 0Z" fill="#C4C4C4" fill-opacity="0.3"/>
+                    </svg>
+            a(href="/start") .next Start
+    script(src="home.js") 

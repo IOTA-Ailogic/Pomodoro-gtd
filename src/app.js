@@ -22,12 +22,9 @@ app.use(
   })
 );
 
-const r_pomodoro = require('./routes/r_pomodoro');
-const r_gtd = require('./routes/r_gtd');
+const router = require('./routes');
 
-app.use('/pomodoro', r_pomodoro());
-app.use('/gtd', r_gtd());
-app.get('/', (req, res)=> res.render('home'))
+app.use('/', router())
 
 app.use((req, res) => {
   res.status(404);
